@@ -11,6 +11,7 @@ function Forminput({ onAddProduct }) {
 
     const newProduct = {
       productName,
+
       productId,
       productPrice,
       category,

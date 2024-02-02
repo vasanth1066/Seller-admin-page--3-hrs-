@@ -6,7 +6,6 @@ function App() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // Retrieve all data from local storage using productId as the key
     const allProducts = Object.keys(localStorage).map((key) =>
       JSON.parse(localStorage.getItem(key))
     );
@@ -17,9 +16,8 @@ function App() {
   }, []);
 
   const handleAddProduct = (newProduct) => {
-    // Update state with new product
     setProducts([...products, newProduct]);
-    // Store the new product in local storage with productId as the key
+
     localStorage.setItem(newProduct.productId, JSON.stringify(newProduct));
   };
 
